@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title> Hola mundo!</title>
+	<!--- rel = relacón -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
+<!-- Primero se carga la fuente y luego el css-->
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<!--style>
+			header{
+				background: green;
+			}
+		</style> No recomendado para dar estilos-->
+
+	</head>
+	<body>
+
+		<!-- header style="color: red; background: blue;"  No recomendado -->
+		<header class="header">
+				<figure class="logo"> <!-- Contenedor de imágen -->
+					<img src="images/logo.png" alt="Logo de leonidasesteban.com"> <!-- Se puede agregar un texto al lado -->
+				</figure>
+				<nav class="menu" id="menu">
+					<ol>
+						<li> <!-- href enlace--->
+							<a class="link" href="#portafolio">Portafolio</a>
+						</li>
+						<li>
+							<a class="link" href="#experiencia">Experiencia</a>
+						</li>
+						<li>
+							<a class="link" href="#contacto">Trabajemos juntos</a>
+						</li>
+					</ol>
+				</nav>
+		</header>
+<!-- Sección principal -->
+		<section class="hero">
+			<h1>
+				Hola! Soy <strong> Marisol Cervantes</strong>. <br/> Desarrolladora <strong>JavaScript</strong>
+				con <br/> pasión por la <strong>enseñanza</strong>
+			</h1>
+	<!-- Se puede agregar height también -->
+			<!--img src="images/hero.jpg" width="500"  alt="Imagen principal del sitio"> Imagen de portada -->
+		</section>
+<!-- Sección 1 -->
+		<section id="portafolio" class="portfolio">  <!--Mejor usar el nombre de la clase-->
+			<h2>Portafolio (Proyectos Destacados)</h2>
+			<article class="project">
+				<div class="project-description">
+					<h3 class="project_title"> Platzi video </h3>
+					<h6 class="project_curse"> React Native / React </h6>
+					<p class="project_date"> <small><strong>Fecha:</strong> 19-08-2020</small></p>
+					<p class="project_url"><small><strong>Puedes verlo en: </strong>www.platzi.com/native</small></p>
+					<p class="project_description">Platzi Video fue el resultado de 3 meses de trabajo para <br>crear la mejor app para enseñar el 
+						funcionamiento de <br> React y React Native. Desde crear un vista-detalle, <br> hasta patrones 
+						avanzados de navegación, este <br> proyecto ha sido el ejemplo de futuros creadores de <br>
+					aplicaciones multiplataforma</p>
+				</div>
+				<figure class="project_imageWrapper">
+					<img width="500" src="images/platzi-video-react-native.png" alt="Proyecto del curso de React native">
+				</figure>
+			</article>
+
+			<article class="project">
+				<a title="Volver al menú"  href="#menu" class="home-icon"> 
+					<img width="20" src="images/casa.png" alt="Regresar a la parte superior"/>
+				</a>
+				<div class="project-description">
+					<h3 class="project_title"> Platzi video </h3>
+					<h6 class="project_curse"> React Native / React </h6>
+					<p class="project_date"> <small><strong>Fecha:</strong> 19-08-2020</small></p>
+					<p class="project_url"><small><strong>Puedes verlo en: </strong>www.platzi.com/native</small></p>
+					<p class="project_description">Platzi Video fue el resultado de 3 meses de trabajo para <br>crear la mejor app para enseñar el 
+						funcionamiento de <br> React y React Native. Desde crear un vista-detalle, <br> hasta patrones 
+						avanzados de navegación, este <br> proyecto ha sido el ejemplo de futuros creadores de <br>
+					aplicaciones multiplataforma</p>
+				</div>
+				<figure class="project_imageWrapper">
+					<img width="500" src="images/platzi-video-react-native.png" alt="Proyecto del curso de React native">
+				</figure>
+			</article>
+		</section>
+<!-- Sección 2 -->
+		<section id="experiencia" class="experience">
+			<h2>Más sobre mi experiencia</h2>
+			<article class="event">
+				<div class="event_details">
+					<h3 class="event_title">PlatziConf México 2018</h3>
+					<p class="event_description">El evento más grande sobre gente que quiere <br>aprender más de internet. En esté evento te 
+						comparto <br>como tener una vida de constante aprendizaje.</p>
+					<a class="event_url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+				</div>
+				<figure class="event_imageWrapper">
+					<img src="images/platzi-conf.jpg" width="500" class="event_image"/>
+				</figure>
+			</article>
+		</section>
+<!-- Sección 3 - Formularios -->
+		<section id="contacto" class="contact">
+			<div class="contact_form">
+				<h2>¿Creamos algo juntos?</h2>
+				<form action="/suscripcion" class="form_email">  <!-- autocomplete="off" -->
+					<!-- Label describe un campo -->
+					<!-- label for="email"> Ingresa el email</label -->
+					<input type="text" placeholder="Dejame tu email" id="email"> <!-- value="" valor por defecto"-->
+					<!-- input type="submit" value="Enviar..."-->
+					<button id="send_button">Enviar</button>
+				</form>
+			</div>
+
+			<div class="social_media_images">
+				<a title="Facebook" href="about:blank" target="_blank" class="social_media_image"> 
+					<img src="images/facebook.svg" alt="Facebook" height="60px" width="60px">
+				</a>
+				<a title="Github" href="about:blank" target="_blank" class="social_media_image"> 
+					<img src="images/github.svg" alt="Github" width="60px">
+				</a>
+				<a title="Twitter" href="about:blank" target="_blank" class="social_media_image"> 
+					<img src="images/twitter.svg" alt="Twitter" width="60px">
+				</a>
+				<a title="Instagram" href="about:blank" target="_blank" class="social_media_image"> 
+					<img src="images/instagram.svg" alt="Instagram" width="60px">
+				</a>
+			</div>
+		</section>
+		<footer class="footer"> 
+			<div id="course_name">
+				<p> Curso de desarrollo web online</p>
+				<figure>
+					<img src="images/platzi.png" alt="Platzi logo" width="60px">
+				</figure>
+			</div>
+			<p> Designed with <\3 by @thespianartist <a href="https://twitter.com/thespianartist" alt="@thespianartist"></p>
+		</footer>
+	</body>
+</html>

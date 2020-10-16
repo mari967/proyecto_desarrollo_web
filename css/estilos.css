@@ -1,0 +1,383 @@
+.header {
+background-color: #1a72ca;
+color: rgb(0, 255, 21); /*????????*/
+display: flex;
+justify-content: space-between;
+height: 90px;
+align-items: flex-end;
+}
+
+.menu { /* .menu hereda de .header */
+	height: inherit;
+  }
+  
+  
+  .header ol li { /* .header ol li hereda de .header ol */
+	height: inherit;
+	/* padding: 20px; */
+	font-weight: 500;
+	
+  }
+  
+  .header a { /* .header a hereda de .header ol li */
+	color: blue;
+	text-decoration: none;
+	height: inherit;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+  }
+
+.header ol {
+	display: flex;
+	height: inherit;
+}
+
+body {
+	background: white;
+	font-family: "Source Sans Pro", sans-serif;
+	/*Tiene un margen por defento*/
+	margin: 0;
+	background-color: #fafafa;
+}
+
+
+h1,
+/* h2, */
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5em; /*1.5 porcentaje = 150%*/
+	/* font-size: 40px; */
+	font-weight: 300;
+	/*font-style: italic; /*Lo hace el navegador de forma automática. Es mejor importar la fuente con el estilo*/
+	letter-spacing: -.2px;
+	text-transform: capitalize;
+	/*text-decoration: dashed;*/
+	font-family: "Fjalla One", sans-serif;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+.hero {
+	/*Altos fijos. No es responsive*/
+	height: 300px;
+	background-image: url("../images/hero.jpg"); /*la imagen se repite por defecto*/
+	background-color: #1b2127;
+	color: white;
+	background-size: 500px 300px; /*tamaño de imagen de fondo largo y ancho*/
+	background-repeat: no-repeat;
+	background-position-x: right; /*background-position para el eje x y para el eje y. Puede ser en pixeles o en palabras clave right, left*/
+}
+
+h1 {
+	margin: 0px 520px 20px 30px;
+}
+
+ol, ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+figure {
+	margin: 0;
+}
+
+.hero h1 strong {
+	color: #026fff;
+}
+
+/*.project div {}*/
+.project-description {
+	width: 500px;
+}
+
+.header {
+	color: white; /*color del texto*/
+	background-color: #1b2127;
+}
+
+/*enlaces dentro del header*/
+.header a {
+	color: white;
+	text-decoration: none;
+}
+
+
+.portfolio {
+	background: #fafafa;
+}
+
+.project {
+	/*border-top: 10px solid deeppink;
+	border-bottom:10px solid deepskyblue;
+	border-left:10px solid greenyellow;
+	border-right:10px solid blanchedalmond;*/
+	/*border-color: blue;
+	border-top-color: greenyellow;
+	border-width: 15px;
+	border-style: dotted;*/
+	/*El borde hereda el color del texto*/
+	border: 1px solid gray;
+	border-radius: 10px;
+	border-top-right-radius: 50px;
+	margin:40px 50px;
+	padding: 40px;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.home-icon {
+	align-self: flex-start;
+}
+
+.experience {
+	background-color: #fafafa;
+}
+
+.event {
+	border: 1px solid gray;
+	border-radius: 10px;
+	border-top-right-radius: 50px;
+	margin: 40px 50px;
+	padding: 40px;
+	background: #F4FBFF;
+	display: flex;
+	justify-content: space-between;
+}
+
+section a {
+	text-decoration: none;
+}
+section h2 {
+	margin-left: 50px;
+	text-transform: uppercase;
+	color: #026fff;
+	font-size: 25px;
+}
+
+
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	background-color: #026FFF;
+	height: 180px;
+}
+
+.contact_form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form_email {
+	margin-left: 50px;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+#email {
+	width: 280px;
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+#send_button {
+	width: 90px;
+	height: 30px;
+}
+
+.social_media_images {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 100px;
+}
+
+.social_media_image {
+	margin: 0 25px;
+}
+
+.contact h2 {
+	color:white;
+}
+
+
+
+.footer {
+	background: #1D252C;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer p {
+	margin: 20px;
+	color: white;
+	letter-spacing: -.2px;
+	font-weight: 500;
+}
+
+.footer img { /*Alinear con respecto a la imagen*/
+	vertical-align: center;
+}
+
+#course_name {
+	/* display: flex; */
+	/* align-items: center; */
+}
+
+/*23 - Margin collapse
+Espacio seguro
+Elemento A tiene un margen de 30
+Elemento B tiene un margen de 50
+el espacio entre ambos es de 50 no de 80. QUeda el espacio mayor
+
+margin: top right bottom left (en sentido horario desde las 12)
+margin: 30px 20px 20px 10px
+
+margin: top+bottom left+right (mismo margen para dos lados)
+margin: 10px 20px
+margin: auto  -> toma todo el espacio disponible. Se autoajusta
+
+Útil para centrar los elementos de 
+* ancho fijo
+* div  { display: block } -> viene por defecto en div, article. Ver en inspector de elementos
+
+margin-right, margin_left, margin-bottom
+
+
+Si el margen tiene el tamaño de la imagen, el texto nunca va a estar
+margen al h1, para que no se pegue la imagen
+sobre ella cuando la pantalla sea más pequeña
+*/
+
+/*
+24
+Background: url() es igual a image
+*/
+
+/*
+25 - Modelo de caja
+-------------------------------
+Ancho total de un elemento = ancho central (en celeste en el inspector de elementos/computed)
++
+padding x 2 (inferior y superior)
++
+Boder x 2 (inferior y superior)
+--------------------------------
+Box-sizing
+*****************
+Border box -> Se aplica un ancho y altura máximas, si el padding y el borde crecen y su suma es mayor que 
+				ese máximo, crecen hacia adentro
+Default -> El ancho y alto es solo para el contenido. El padding y el borde se agregan al exterior de este
+
+*/
+
+/*
+26 - Tipos de display
+Todos los elementos tienen un tipo de display por defecto
+**********************************************************
+Head -> none por defecto
+Br -> es inline, pero tiene efecto de salto de línea como block
+Strong -> inline por defecto
+
+Tipos
+******
+None -> oculta el contenido
+Block -> hace que el contenido ocupe todo el ancho posible
+inline -> Se agrupan los contenidos que tengan inline en la misma línea, pero los mismos no respetan el ancho(width)
+			predefinido. Los contenidos se "estiran"
+inline-block -> Ingual a inline, pero respeta el ancho predefinido
+flex -> Se aplica a los padres. Los elementos hijos se alinean en fila
+Grid -> Muy avanzado. Tiene su propio curso
+*/
+
+/*
+27 - Propiedades de flexbox
+Al padre se le agrega 
+.clasePadre {
+	display: flex; -> Hace que el modelo de caja se rompa
+	flex-wrap: wrap -> Los elementos se agrupan fila según el tamaño de la pantalla. Se ajustan dinámicamente
+				nowrap -> Los elementos se arupan en la misma fila y exceden el tamaño actual de la pantalla si 
+				no tienen espacio suficiente
+
+	flex-direction: column -> cada elemento hijo se ubica en una fila, todos apilados en columna
+					row ->  Valor por defecto. Elementos se disponen en fila
+}
+
+.claseHija {
+	flex-shrink: 0 -> capacidad de encogimiento. Toma valores de 0 a 1
+					Si es 0, los elementos no van a cambiar su ancho ni alto predefinido segun 
+					el ancho o alto del flexbox
+}
+*/
+
+
+
+.flexbox {
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	height: 300px;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+
+.box {
+	height: 40px;
+	width: 40px;
+	border: 1px solid red;
+	margin:0px;
+}
+
+/*
+28 - Alineando elementos de forma horizontal
+*******
+Marging collanpsing -> Si el padre usa un display de flexbox, los márgenes de los 
+elementos hijos se suman 
+
+justify content -> ajusta horizontalmente el espacio entre elmentos hijos y su posición relativa
+
+.clasePadre {
+	justify-content: flex-start -> Por defecto. las clases hijas se agrupan a la izquierda
+	justify-content: flex-end -> Agrupamiento a la derecha
+	justify-content: center -> Agrupamiento al centro
+	***
+	Con las siguientes propiedades, el espacio disponible se reparte
+	***
+	justify-content: space-around -> Hacia cada lado de cada elemento. Es como agregar margenes. 
+									El espacio entre dos elementos se suma
+									La diferencia con space-evenly es que en los elementos de los extremos
+									y el borde de la pantalla hay la mitad del espacio 
+
+	justify-content: space-between -> El mismo espacio entre los elementos, pero entre los de los extremos 
+									y la pantalla no hay espacio
+	justify-content: space-evenly -> entre cada elemento y los bordes de la pantalla hay el mismo espacio
+}
+
+*/
+
+/*
+29 - Alineando elementos de forma vertical
+*********
+align-items
+justify-content y align-itms "rotan" y trabajan en sentido vertical y horizontal respectivamente,
+si se usa flex-direction
+
+.claseHija
+align-self
+Alinea al un elemento dentro del flexbox en cualquier posición, independientemente de donde alínee sus elementos 
+la clase padre
+
+*/
