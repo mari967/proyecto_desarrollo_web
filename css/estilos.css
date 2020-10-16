@@ -2,9 +2,9 @@
 background-color: #1a72ca;
 color: rgb(0, 255, 21); /*????????*/
 display: flex;
+height: 70px;
 justify-content: space-between;
-height: 90px;
-align-items: flex-end;
+align-items: center;
 }
 
 .menu { /* .menu hereda de .header */
@@ -71,10 +71,17 @@ h1 {
 	background-size: 500px 300px; /*tamaño de imagen de fondo largo y ancho*/
 	background-repeat: no-repeat;
 	background-position-x: right; /*background-position para el eje x y para el eje y. Puede ser en pixeles o en palabras clave right, left*/
+	display: flex;
+	align-items: center;
 }
 
 h1 {
-	margin: 0px 520px 20px 30px;
+	font-size: 40px;
+	line-height: 1.5;
+	letter-spacing: -.2px;
+	color: white;
+	margin: 0;
+	/* margin: 0px 520px 20px 30px; */
 }
 
 ol, ul {
@@ -110,6 +117,7 @@ figure {
 
 .portfolio {
 	background: #fafafa;
+	padding: 20px;
 }
 
 .project {
@@ -125,40 +133,99 @@ figure {
 	border: 1px solid gray;
 	border-radius: 10px;
 	border-top-right-radius: 50px;
-	margin:40px 50px;
 	padding: 40px;
+	margin: 40px;
 	background: white;
 	display: flex;
 	justify-content: space-between;
+}
+
+.project-title {
+	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.project-course {
+	margin: 10px 0;
+}
+
+.project-course,
+.project-date,
+.project-url {
+	margin:10px 0;
+}
+
+.project-description {
+	font-size: 20px;
+}
+
+.project strong {
+	font-family: "Fjalla One", sans-serif;
 }
 
 .home-icon {
 	align-self: flex-start;
 }
 
-.experience {
+.event-list {
 	background-color: #fafafa;
+	display: flex;
+	
 }
 
 .event {
 	border: 1px solid gray;
 	border-radius: 10px;
 	border-top-right-radius: 50px;
-	margin: 40px 50px;
-	padding: 40px;
+	margin: 10px;
+	width: 480px;
+	/* padding: 40px; */
 	background: #F4FBFF;
-	display: flex;
 	justify-content: space-between;
+	flex-shrink: 0;
+	overflow: hidden; /*Cuadno el elemento se desborde, se oculta. Initial por defecto. No hace nada si desborda. Para
+	generar scrols*/
+}
+
+.event img {
+	width: 480px;
+	height: 200px;
+	object-fit: cover; /*La imagen no se deforma*/
+}
+
+.event-details {
+	margin: 20px 40px; /*Arriba-abajo  costados*/
+	margin-top: -40px;
+	position: relative; /*Es un concepto complejo. Se enseña en el curso avanzado de CSS. Por ahora
+	sirve para superponer elementos*/
+	background-color: white;
+	padding: 20px;
+	text-align: center; /*No  utilizar nunca justify*/
+}
+
+.event-description {
+	text-align: left;
+}
+
+.event-url {
+	color: #056fff;
+	border: 1px solid;
+	text-decoration: none;
+	padding: 5px 20px;
+	border-radius: 5px;
+
 }
 
 section a {
 	text-decoration: none;
 }
-section h2 {
+h2 {
 	margin-left: 50px;
 	text-transform: uppercase;
 	color: #026fff;
-	font-size: 25px;
+	font-size: 24px;
+	margin-bottom: 40px;
 }
 
 
@@ -168,6 +235,7 @@ section h2 {
 	justify-content: space-between;
 	align-content: center;
 	background-color: #026FFF;
+	color: white;
 	height: 180px;
 }
 
@@ -195,16 +263,21 @@ section h2 {
 	height: 30px;
 }
 
-.social_media_images {
+.social {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-right: 100px;
 }
 
-.social_media_image {
-	margin: 0 25px;
+.social-link {
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+	/* margin: 0 25px; */
 }
+
+
 
 .contact h2 {
 	color:white;
@@ -213,21 +286,26 @@ section h2 {
 
 
 .footer {
-	background: #1D252C;
+	background-color: #1D252C;
+	color: white; /*textos*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 
 .footer p {
 	margin: 20px;
-	color: white;
 	letter-spacing: -.2px;
 	font-weight: 500;
 }
 
 .footer img { /*Alinear con respecto a la imagen*/
-	vertical-align: center;
+	vertical-align: middle;
+}
+
+.footer a {
+	color: white;
 }
 
 #course_name {
