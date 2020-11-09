@@ -1,6 +1,6 @@
 .header {
-background-color: #1a72ca;
-color: rgb(0, 255, 21); /*????????*/
+color: white; /*Texto*/
+background-color: #1b2127;
 display: flex;
 height: 70px;
 justify-content: space-between;
@@ -65,15 +65,21 @@ h1 {
 .hero {
 	/*Altos fijos. No es responsive*/
 	height: 300px;
-	background-image: url("../images/hero.jpg"); /*la imagen se repite por defecto*/
+	/* background-image: url("../images/hero.jpg"); la imagen se repite por defecto */
 	background-color: #1b2127;
 	color: white;
-	background-size: 500px 300px; /*tamaño de imagen de fondo largo y ancho*/
-	background-repeat: no-repeat;
+	/* background-size: 500px 300px; tamaño de imagen de fondo largo y ancho */
+	/* background-repeat: no-repeat; */
 	background-position-x: right; /*background-position para el eje x y para el eje y. Puede ser en pixeles o en palabras clave right, left*/
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
+
+.hero-image {
+	object-fit: cover;
+}
+
 
 h1 {
 	font-size: 40px;
@@ -103,10 +109,7 @@ figure {
 	width: 500px;
 }
 
-.header {
-	color: white; /*color del texto*/
-	background-color: #1b2127;
-}
+
 
 /*enlaces dentro del header*/
 .header a {
@@ -134,7 +137,7 @@ figure {
 	border-radius: 10px;
 	border-top-right-radius: 50px;
 	padding: 40px;
-	margin: 40px;
+	/* margin: 40px; */
 	background: white;
 	display: flex;
 	justify-content: space-between;
@@ -171,6 +174,7 @@ figure {
 .event-list {
 	background-color: #fafafa;
 	display: flex;
+	flex-wrap: wrap;
 	
 }
 
@@ -178,8 +182,8 @@ figure {
 	border: 1px solid gray;
 	border-radius: 10px;
 	border-top-right-radius: 50px;
-	margin: 10px;
-	width: 480px;
+	margin: 20px;
+	width: 450px;
 	/* padding: 40px; */
 	background: #F4FBFF;
 	justify-content: space-between;
@@ -233,10 +237,11 @@ h2 {
 .contact {
 	display: flex;
 	justify-content: space-between;
-	align-content: center;
+	align-items: center;
 	background-color: #026FFF;
 	color: white;
 	height: 180px;
+	padding: 20px;
 }
 
 .contact_form {
@@ -252,32 +257,76 @@ h2 {
 	flex-wrap: nowrap;
 }
 
+.form_email input {
+	border-color: gray;
+	padding: 5px 20px 5px 25px;
+	border-style: solid;
+	border-radius: 5px;
+	background-image: url("../images/envelope.svg");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 5px;
+}
+
+
+
 #email {
 	width: 280px;
 	height: 25px;
 	margin-bottom: 10px;
 }
 
-#send_button {
+.form_email button {
+	display: block;
+	margin-top: 10px;
+	background: transparent;
+	border-color: white;
+	color: white;
+	padding: 5px 0;
+	border-radius: 5px;
 	width: 90px;
 	height: 30px;
 }
 
+.contact_form h2 {
+	margin-bottom: 10px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
 .social {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 100px;
+	
+	/* display: flex; */
+	/* justify-content: center;
+	align-items: center; */
+	/* margin-right: 100px; */
 }
 
 .social-link {
+	display: inline-block;
 	width: 50px;
 	height: 50px;
-	border: 1px solid white;
-	/* margin: 0 25px; */
+	margin: 0 20px;
+	background-size: 50px 50px;
 }
 
+.social-link.twitter {
+	background-image: url("../images/twitter.svg");
+}
 
+.social-link.facebook {
+	background-image: url("../images/facebook.svg");
+}
+
+.social-link.github {
+	background-image: url("../images/github.svg");
+}
+
+.social-link.instagram {
+	background-image: url("../images/instagram.svg");
+}
+
+/*scalable vector grafics -> imagenes que no se pixelan. Necesitan tamaño*/
 
 .contact h2 {
 	color:white;
@@ -311,6 +360,18 @@ h2 {
 #course_name {
 	/* display: flex; */
 	/* align-items: center; */
+}
+
+
+.container {
+	width: 1000px;
+	/* border: 1px solid red; */
+	margin: 0 auto;
+	display: inherit;
+	justify-content: inherit;
+	align-items: inherit;
+	height: inherit;
+	flex-wrap:inherit;
 }
 
 /*23 - Margin collapse
